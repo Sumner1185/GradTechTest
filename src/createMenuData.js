@@ -3,7 +3,7 @@ function createMenuData(data) {
     return data
   } else {
     let parent = data[0].split('/')
-    return [`${parent[0]}`]
+    return [`${parent[0]}`, [`${parent[1]}`]]
   }
 }
 
