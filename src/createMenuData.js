@@ -1,5 +1,8 @@
 createMenuData = (data) => {
   let menuData = []
+  if (!Array.isArray(data)) {
+    throw new Error('Input data must be an array')
+  }
 
   isEmptyArray(data) ? data : checkData(data, menuData)
   return menuData

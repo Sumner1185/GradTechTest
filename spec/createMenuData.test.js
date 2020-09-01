@@ -84,5 +84,13 @@ createMenuData = require('../src/createMenuData')
         const actualResult = createMenuData(data);
         expect(actualResult).toMatchObject(expectedResult);
       });
+
+      it('Raises error if anything other than an array is passed', () => {
+        let data = 123
+
+        expect(() => {
+          createMenuData(data)
+        }).toThrow('Input data must be an array')
+      })
     
   });
