@@ -15,7 +15,7 @@ createMenuData = require('../src/createMenuData')
 
       it('Takes an array with one string splits at / and returns title as string and data as array of strings', () => {
         let data = ['parent1/parent1child']
-        expectedResult = ['parent1', ['parent1child']]
+        expectedResult = [{title: 'parent1', data: ['parent1child']}]
         expect(createMenuData(data)).toEqual(expectedResult)
       })
 
