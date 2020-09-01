@@ -22,3 +22,13 @@ When the test passes clean up your code.
 It's worth spending time formatting and simplifing thins.
 It's more important that humans can read your code than computers.
 Software tools like `eslint` do some amazing things 🕶
+
+## Tests
+
+
+* Takes an array as a parameter
+* Takes an array with one string splits at '/' and returns title
+* Takes an array with one string splits at '/' and returns data as array
+* Takes array with one strings and returns object with title: and data:
+* Takes multiple strings and returns multiple objects
+* Raises error if data is not given as array
