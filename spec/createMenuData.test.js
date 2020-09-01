@@ -60,7 +60,7 @@ createMenuData = require('../src/createMenuData')
         expect(createMenuData(data)).toEqual(expectedResult)
       })
 
-      xit("creates correct data structure ", () => {
+      it("creates correct data structure ", () => {
         const data = [
           "parent1/parent1child",
           "parent1/parent1child2",
