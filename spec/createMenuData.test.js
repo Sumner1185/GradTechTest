@@ -92,5 +92,21 @@ createMenuData = require('../src/createMenuData')
           createMenuData(data)
         }).toThrow('Input data must be an array')
       })
+
+      it('Raises error if anything other than an array is passed', () => {
+        let data = 'Test'
+
+        expect(() => {
+          createMenuData(data)
+        }).toThrow('Input data must be an array')
+      })
+
+      it('Raises error if anything other than an array is passed', () => {
+        let data = true
+
+        expect(() => {
+          createMenuData(data)
+        }).toThrow('Input data must be an array')
+      })
     
   });

@@ -33,5 +33,5 @@ Software tools like `eslint` do some amazing things 🕶
 * Takes array with two strings and returns object with title: and grouped data: X
 * Takes array with same parent and return data with mutiple elements X
 * Takes multiple strings and returns multiple objects X
-* If no child date then nothing added to menuData
-* Raises error if data is not given as array
+* If no child date then nothing added to menuData X
+* Raises error if data is not given as array X
