@@ -1,7 +1,13 @@
 createMenuData = require('../src/createMenuData')
 
   describe("menu Data Generator", () => {
-      it("creates correct data structure ", () => {
+
+      it('Takes an array as a parameter', () => {
+        let arr = []
+        expect(createMenuData(arr)).toEqual(arr)
+      })
+      
+      xit("creates correct data structure ", () => {
         const data = [
           "parent1/parent1child",
           "parent1/parent1child2",
