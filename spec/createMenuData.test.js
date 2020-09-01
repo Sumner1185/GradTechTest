@@ -42,10 +42,11 @@ createMenuData = require('../src/createMenuData')
       })
 
       it('Can group data when parent details are not in order', () => {
-        let data = ["parent1/parent1child", "parent1/parent1child2", "parent2/parent2child"]
+        let data = ["parent1/parent1child", "parent2/parent2child", "parent3/parent3child", "parent1/parent1child2"]
         let expectedResult = [
           { title: 'parent1', data: ['parent1child', 'parent1child2'] },
-          { title: 'parent2', data: ['parent2child'] }
+          { title: 'parent2', data: ['parent2child'] },
+          { title: 'parent3', data: ['parent3child'] }
         ]
         expect(createMenuData(data)).toEqual(expectedResult)
       })
