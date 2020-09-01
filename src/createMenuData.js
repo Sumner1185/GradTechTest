@@ -1,4 +1,4 @@
-function createMenuData(data) {
+function createMenuData (data) {
   let menuData = []
 
   if (data.length === 0) {
@@ -7,14 +7,23 @@ function createMenuData(data) {
     for (let i = 0; i < data.length; i++) {
       let result = data[i].split('/')
       let found = menuData.some(el => el.title === result[0])
-      if (menuData[i - 1] !== undefined && found) {
-        menuData[i - 1].data.push(result[1])
+      if (found) {
+        checkParentName(menuData, result[0], result[1])
       } else {
       menuData.push({title: result[0], data: [result[1]]})
       }
     }
     return menuData
   }
+}
+
+function checkParentName (arr, name, child) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].title === name) {
+      arr[i].data.push(child)
+    }
+  }
+  return arr
 }
 
 module.exports = createMenuData
