@@ -10,11 +10,7 @@ function createMenuData (data) {
         // do nothing
       } else {
         let found = menuData.some(el => el.title === result[0])
-        if (found) {
-          checkParentName(menuData, result[0], result[1])
-        } else {
-        menuData.push({title: result[0], data: [result[1]]})
-        }
+        found ? checkParentName(menuData, result[0], result[1]) : menuData.push({title: result[0], data: [result[1]]})
       }
     }
     return menuData
