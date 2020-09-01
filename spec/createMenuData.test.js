@@ -20,11 +20,10 @@ createMenuData = require('../src/createMenuData')
       })
 
       it('Takes array with two strings and returns object with title: and data:', () => {
-        let data = ["parent1/parent1child", "parent1/parent1child2"]
+        let data = ["parent1/parent1child", "parent2/parent2child"]
         let expectedResult = [
-          {
-            title: 'parent1', data: ['parent1child', 'parent1child2']
-          }
+          { title: 'parent1', data: ['parent1child'] },
+          { title: 'parent2', data: ['parent2child'] }
         ]
         expect(createMenuData(data)).toEqual(expectedResult)
       })

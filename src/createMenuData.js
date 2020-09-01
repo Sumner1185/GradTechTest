@@ -7,7 +7,10 @@ function createMenuData(data) {
   } else {
     let first = data[0].split('/')
     let second = data[1].split('/')
-    return [{title: `${first[0]}`, data: [`${first[1]}`, `${second[1]}`]}]
+    return [
+      { title: `${first[0]}`, data: [`${first[1]}`] },
+      { title: `${second[0]}`, data: [`${second[1]}`] }
+    ]
   }
 }
 
