@@ -1,7 +1,7 @@
-function createMenuData (data) {
+createMenuData = (data) => {
   let menuData = []
 
-  if (data.length === 0) {
+  if (isEmptyArray(data)) {
     return data
   } else {
     for (let i = 0; i < data.length; i++) {
@@ -17,7 +17,7 @@ function createMenuData (data) {
   }
 }
 
-function checkParentName (arr, name, child) {
+checkParentName = (arr, name, child) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].title === name) {
       arr[i].data.push(child)
@@ -25,5 +25,7 @@ function checkParentName (arr, name, child) {
   }
   return arr
 }
+
+isEmptyArray = data => data.length === 0
 
 module.exports = createMenuData
