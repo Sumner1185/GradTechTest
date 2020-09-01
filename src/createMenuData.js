@@ -1,5 +1,10 @@
 function createMenuData(data) {
-  return data
+  if (data.length === 0) {
+    return data
+  } else {
+    let parent = data[0].split('/')
+    return [`${parent[0]}`]
+  }
 }
 
 module.exports = createMenuData
