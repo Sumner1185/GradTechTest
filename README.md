@@ -29,6 +29,6 @@ Software tools like `eslint` do some amazing things 🕶
 * Takes an array as a parameter
 * Takes an array with one string splits at '/' and returns title as string
 * Takes an array with one string splits at '/' and returns title as string and data as array
-* Takes array with one strings and returns object with title: and data:
+* Takes array with two strings and returns object with title: and data:
 * Takes multiple strings and returns multiple objects
 * Raises error if data is not given as array
