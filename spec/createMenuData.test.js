@@ -32,6 +32,15 @@ createMenuData = require('../src/createMenuData')
         expect(createMenuData(data)).toEqual(expectedResult)
       })
 
+      it('Takes array with three strings and returns object with title: and grouped data:', () => {
+        let data = ["parent1/parent1child", "parent1/parent1child2", "parent2/parent2child"]
+        let expectedResult = [
+          { title: 'parent1', data: ['parent1child', 'parent1child2'] },
+          { title: 'parent2', data: ['parent2child'] }
+        ]
+        expect(createMenuData(data)).toEqual(expectedResult)
+      })
+
       xit("creates correct data structure ", () => {
         const data = [
           "parent1/parent1child",
