@@ -1,8 +1,6 @@
 createMenuData = (data) => {
   let menuData = []
-  if (!Array.isArray(data)) {
-    throw new Error('Input data must be an array')
-  }
+  checkError(data)
 
   isEmptyArray(data) ? data : checkData(data, menuData)
   return menuData
@@ -31,5 +29,11 @@ repeatParentName = (arr, name, child) => {
 }
 
 isEmptyArray = data => data.length === 0
+
+checkError = (data) => {
+  if (!Array.isArray(data)) {
+    throw new Error('Input data must be an array')
+  }
+}
 
 module.exports = createMenuData
