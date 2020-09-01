@@ -51,6 +51,15 @@ createMenuData = require('../src/createMenuData')
         expect(createMenuData(data)).toEqual(expectedResult)
       })
 
+      it('Adds nothing to the array in no child information', () => {
+        let data = ["parent1/parent1child", "parent2/parent2child", "parent3"]
+        let expectedResult = [
+          { title: 'parent1', data: ['parent1child'] },
+          { title: 'parent2', data: ['parent2child'] }
+        ]
+        expect(createMenuData(data)).toEqual(expectedResult)
+      })
+
       xit("creates correct data structure ", () => {
         const data = [
           "parent1/parent1child",

@@ -26,12 +26,12 @@ Software tools like `eslint` do some amazing things 🕶
 ## Tests
 
 
-* Takes an array as a parameter
-* Takes an array with one string splits at '/' and returns title as string
-* Takes an array with one string splits at '/' and returns title as string and data as array
-* Takes array with two strings and returns object with title: and data:
-* Takes array with two strings and returns object with title: and grouped data:
-* Takes array with same parent and return data with mutiple elements
-* Takes multiple strings and returns multiple objects
+* Takes an array as a parameter X
+* Takes an array with one string splits at '/' and returns title as string X
+* Takes an array with one string splits at '/' and returns title as string and data as array X
+* Takes array with two strings and returns object with title: and data: X
+* Takes array with two strings and returns object with title: and grouped data: X
+* Takes array with same parent and return data with mutiple elements X
+* Takes multiple strings and returns multiple objects X
 * If no child date then nothing added to menuData
 * Raises error if data is not given as array

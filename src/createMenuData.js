@@ -6,11 +6,15 @@ function createMenuData (data) {
   } else {
     for (let i = 0; i < data.length; i++) {
       let result = data[i].split('/')
-      let found = menuData.some(el => el.title === result[0])
-      if (found) {
-        checkParentName(menuData, result[0], result[1])
+      if (result.length === 1) {
+        // do nothing
       } else {
-      menuData.push({title: result[0], data: [result[1]]})
+        let found = menuData.some(el => el.title === result[0])
+        if (found) {
+          checkParentName(menuData, result[0], result[1])
+        } else {
+        menuData.push({title: result[0], data: [result[1]]})
+        }
       }
     }
     return menuData
